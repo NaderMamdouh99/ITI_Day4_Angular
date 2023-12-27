@@ -1,0 +1,19 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr id="row" *ngFor="let item of ArrayData">
+      <td>{{item.product}}</td>
+      <td>{{item.price}}</td>
+      <td>
+        <a class="btn btn-outline-danger" (click)="Delete(item)">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

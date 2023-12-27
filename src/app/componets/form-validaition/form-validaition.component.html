@@ -1,0 +1,42 @@
+<form class="row g-3">
+  <div class="col-md-4">
+    <label for="Name" class="form-label">Student Name</label>
+    <input type="text" class="form-control" [ngClass]="{
+      'is-valid' : isValidName,
+      'is-invalid' : !isValidName
+    }" id="Name" [(ngModel)]="stdName" name="Name">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+      Name is Required and min lenght 3 char
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="Age" class="form-label">Last name</label>
+    <input type="number" class="form-control" [ngClass]="{
+      'is-valid' : isValidAge,
+      'is-invalid' : !isValidAge
+    }" id="Age" name="Age" [(ngModel)]="stdAge"  required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div class="invalid-feedback">
+      Age Shoud Be More Than  18 and Less Than 35
+  </div>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-primary" (click)="Add()" type="submit">Submit form</button>
+  </div>
+</form>
+<hr>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-4 bg-dark text-light  m-3" *ngFor="let item of Arraydata let i = index">
+      <h1>NameTask:{{
+        item}}</h1>
+<!--       <input type="button" value="Delete" class="btn btn-outline-danger" (click)="Clear(i)"> -->
+    </div>
+  </div>
+</div>

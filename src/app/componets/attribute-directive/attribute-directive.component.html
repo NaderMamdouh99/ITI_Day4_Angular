@@ -1,0 +1,17 @@
+<p>attribute-directive works!</p>
+
+<h2>Class Attribute</h2>
+Add : <input type="checkbox" [(ngModel)]="appBoolean">
+<div [class.CustomBG]="appBoolean">
+<h1>Wellcome Nader</h1>
+</div>
+
+
+<div [ngClass]="{
+  CustomBG : appBoolean,
+  RedBg : !appBoolean,
+  'text-center':!appBoolean
+}"
+>
+  <h1>Wellcome Adel</h1>
+</div>

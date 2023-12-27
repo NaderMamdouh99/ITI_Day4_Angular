@@ -1,0 +1,9 @@
+<div class="container bg-dark text-light p-5">
+  <h2 class="container">All Students</h2>
+  <div class="row g-2">
+    <div class="col-6" *ngFor="let std of Student">
+      <app-student-details [StudentDetails] ="std"></app-student-details>
+    </div>
+  </div>
+
+</div>
